@@ -1,6 +1,8 @@
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* 2. Remove default margin */
@@ -50,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root{
     --light-red: hsl(0, 100%, 67%);
-    --Orangey yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
     --Green-teal: hsl(166, 100%, 37%);
     --Cobalt-blue: hsl(234, 85%, 45%);
     --Light-slate-blue: hsl(252, 100%, 67%);
@@ -95,6 +97,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
 .result {
@@ -102,7 +105,6 @@ body {
     margin: 50px;
     border-radius: 15px;
     overflow: hidden;
-    font-family: 'Hanken Grotesk', sans-serif;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     background: linear-gradient(
       var(--Light-slate-blue),
@@ -110,36 +112,12 @@ body {
     );
     text-align: center;
     padding: 35px 100px;
-}
-
-.result h2{
-  color: var(--Light-lavender);
-  font-size: 25px;
-}
-
-/* 76 */
-h3 { 
-  position: relative;
-  z-index: 3;
-  color: var(--White);
-  font-size: 67px;
-  margin-top: 65px;
-}
-
-
-.result p{
-  margin-top: -15px;
-}
-
-.result h4{
-  color: var(--White);
-  font-size: 33px;
-  margin-top: -80px;
+    z-index: 2;
 }
 
 .circle{
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background:   
     linear-gradient(
@@ -148,29 +126,113 @@ h3 {
       var(--Persian-blue)
     );
   position: relative;
-  top: -130px;
-  left: calc(36% - 50px);
+  top: -150px;
+  left: calc(20% - 50px);
   z-index: 2;
   opacity: 0.8;
 }
 
+
+.result h2{
+  color: var(--Light-lavender);
+  font-size: 25px;
+  margin-bottom: -10px;
+}
+
+/* 76 */
+h3 { 
+  position: relative;
+  z-index: 3;
+  color: var(--White);
+  font-size: 67px;
+  margin-top: 80px;
+}
+
 .result p{
   color: var(--Light-lavender);
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: -15px;
 }
+
+
+.result h4{
+  color: var(--White);
+  font-size: 30px;
+  margin-top: -130px;
+}
+
 
 .result p:last-of-type{
   font-size: 17px;
   margin: 19px -40px;
   font-weight: 700;
+  margin-top: 15px;
+  line-height: 23px;
 }
+
+/* Summary Card Styles */
 
 .summary {
     width: 375px;
-    margin: 50px;
+    margin: 0px;
     border-radius: 15px;
     overflow: hidden;
     font-family: 'Hanken Grotesk', sans-serif;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
+    left: -90px;
+    padding: 35px 100px;
+}
+
+.summary h2{
+  font-size: 25px;
+}
+
+.summary ul{
+  list-style: none;
+  margin-top: 20px;
+}
+
+.summary li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Pale-blue);
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.summary .red{
+  color: var(--light-red);
+}
+
+.summary .yellow{
+  color: var(--Orangey-yellow);
+}
+
+.summary .green{
+  color: var(--Green-teal);
+}
+
+.summary .blue{
+  color: var(--Cobalt-blue);
+}
+
+.summary li:nth-of-type(1){
+  background-color: hsla(0, 100%, 67%, 5%);
+}
+
+.summary li:nth-of-type(2){
+  background-color: hsla(39, 100%, 56%, 5%);
+}
+
+.summary li:nth-of-type(3){
+  background-color: hsla(166, 100%, 37%, 5%);
+}
+
+.summary li:nth-of-type(4){
+  background-color: hsla(234, 85%, 45%, 5%);
 }
