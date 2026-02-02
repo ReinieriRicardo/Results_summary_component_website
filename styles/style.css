@@ -168,6 +168,7 @@ h3 {
   font-weight: 700;
   margin-top: 15px;
   line-height: 23px;
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 /* Summary Card Styles */
@@ -186,7 +187,8 @@ h3 {
 }
 
 .summary h2{
-  font-size: 25px;
+  font-size: 22px;
+  text-align: left;
 }
 
 .summary ul{
@@ -200,9 +202,10 @@ h3 {
   align-items: center;
   background-color: var(--Pale-blue);
   border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  font-weight: 700;
+  padding: 16px 20px;
+  margin-bottom: 13px;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .summary .red{
@@ -222,17 +225,43 @@ h3 {
 }
 
 .summary li:nth-of-type(1){
-  background-color: hsla(0, 100%, 67%, 5%);
+  background-color: hsla(0, 100%, 67%, 3%);
 }
 
 .summary li:nth-of-type(2){
-  background-color: hsla(39, 100%, 56%, 5%);
+  background-color: hsla(39, 100%, 56%, 3%);
 }
 
 .summary li:nth-of-type(3){
-  background-color: hsla(166, 100%, 37%, 5%);
+  background-color: hsla(166, 100%, 37%, 3%);
 }
 
 .summary li:nth-of-type(4){
-  background-color: hsla(234, 85%, 45%, 5%);
+  background-color: hsla(234, 85%, 45%, 3%);
+}
+
+span.grey{
+  color: hsla(224, 30%, 27%, 0.5);
+  font-weight: 500;
+}
+
+.summary li span:first-child{
+  margin-right: 90px;
+}
+
+.summary button{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(
+      to bottom,
+      var(--Light-slate-blue),
+      var(--Light-royal-blue)
+    );;
+  color: var(--White);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
 }
